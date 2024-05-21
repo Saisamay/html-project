@@ -7,18 +7,19 @@ let emailId = document.getElementById('email-id');
 let password = document.getElementById('password');
 let reEnterPassword = document.getElementById('re-enter-password');
 let captcha = document.getElementById('captcha');
-let captchaText = document.getElementById('captcha-text');
+let captchaText = document.getElementById("captchaText");
 let emailOtp = document.getElementById('email-otp');
 let registerNowBtn = document.getElementById('register-now-btn');
 let loginBtn = document.getElementById('login-btn');
-
+let chars="1234567890ABCDEFGHIJKLMANOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#&";
+let captchag
 function generateCaptcha() {
-    let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','@','#'];
-    let captchaStr = '';
-    for (let i = 0; i < 6; i++) {
-        captchaStr += alphaNums[Math.floor(Math.random() * alphaNums.length)];
+    captchag = ""
+    for(i=0;i<7;i++){
+        let index = Math.floor(Math.random()*chars.length);
+        captchag = captchag+chars[index]
+        captchaText.value=captchag
     }
-    captchaText.value = captchaStr;
 }
 
 function validateForm() {
@@ -26,7 +27,7 @@ function validateForm() {
         alert('Please fill in all the fields');
         return false;
     }
-    if (password.value !== reEnterPassword.value) {
+    if (password.value ==! re-enter-Password.value) {
         alert('Passwords do not match');
         return false;
     }
