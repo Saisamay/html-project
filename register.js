@@ -9,23 +9,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let reEnterPassword = document.getElementById('re-enter-password');
     let captcha = document.getElementById('captcha');
     let captchaText = document.getElementById('captchaText');
-    let emailOtp = document.getElementById('email-otp');
-    let registerNowBtn = document.getElementById('register-now-btn');
-    let loginBtn = document.getElementById('login-btn');
+    let registerNowBtn = document.querySelector('.register-now-btn');
     let chars = "1234567890ABCDEFGHIJKLMANOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#&";
-    let captchag = "";
+    let captchaCode = "";
 
     function generateCaptcha() {
-        captchag = "";
-        for (let i = 0; i < 7; i++) {
+        captchaCode = " ";
+        for (let i = 0; i < 6; i++) {
             let index = Math.floor(Math.random() * chars.length);
-            captchag += chars[index];
+            captchaCode += chars[index];
         }
-        document.getElementById('captchaText').innerHTML= captchag;
+        captchaText.textContent = captchaCode;
     }
 
     function validateForm() {
-        if (firstName.value === '' || lastName.value === '' || age.value === '' || address.value === '' || phoneNo.value === '' || emailId.value === '' || password.value === '' || reEnterPassword.value === '' || captcha.value === '' || emailOtp.value === '') {
+        if (firstName.value === '' || lastName.value === '' || age.value === '' || address.value === '' || phoneNo.value === '' || emailId.value === '' || password.value === '' || reEnterPassword.value === '' || captcha.value === '') {
             alert('Please fill in all the fields');
             return false;
         }
@@ -33,23 +31,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
             alert('Passwords do not match');
             return false;
         }
-        if (captcha.value !== captchaText.value) {
+        if (captcha.value !== captchaCode) {
             alert('Invalid CAPTCHA');
             return false;
         }
         return true;
     }
 
-    registerNowBtn.addEventListener('click', function() {
-        if (validateForm()) {
-            alert('Registration successful');
-        }
-    });
-
-    loginBtn.addEventListener('click', function() {
-    });
-
     generateCaptcha();
 
-    document.body.classList.add('blur');
+    registerNowBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            alert('Registration successful');
+            document.getElementById('registration-form').submit();
+        }
+    });
 });

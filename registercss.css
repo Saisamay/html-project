@@ -1,18 +1,20 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #2e2a2a;
+    color:#ccc
 }
 .container {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #3a3939;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-container {
     padding: 20px;
+    background-color: #3a3939;
 }
 
 .form-group {
@@ -65,7 +67,11 @@ input[type="number"] {
     margin-bottom: 20px;
     border: 1px solid #ccc;
 }
-.register-now-btn,.login-btn{
+.login-btn{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.register-now-btn, .login-btn {
     background-color: #fff;
     border-radius: 10px;
     color: black;
@@ -75,7 +81,14 @@ input[type="number"] {
     margin-left: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;  /* Smooth transition for hover effect */
 }
+
+.register-now-btn:hover, .login-btn:hover {
+    background-color: #262525; 
+    color: #fff;            
+}
+
 
 
 

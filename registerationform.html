@@ -1,16 +1,15 @@
-<!-- registration-form.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> car buying website</title>
+    <title>Car Buying Website - Registration</title>
     <link rel="stylesheet" href="registercss.css">
 </head>
 <body>
     <div class="container">
         <div class="form-container">
-            <h2>Registration Form</h2>
+            <h2 style="text-align: center;">Registration Form</h2>
             <form id="registration-form">
                 <div class="form-group">
                     <label for="first-name">First Name:</label>
@@ -46,11 +45,13 @@
                 </div>
                 <div class="form-group">
                     <label for="captcha">Captcha:</label>
-                    <input type="text" id="captcha" class="block2">
-                    <span id="captchaText" class="block">p@kMlw3</span>
+                    <input type="text" id="captcha" name="captcha" required>
+                    <div id="captchaText" class="block" style="text-align: center;"></div>
                 </div>
-                <button class="register-now-btn"><a style="text-decoration: none;color: black;">Register Now</a></button>
-                <button class="login-btn"><a href="1.html" style="text-decoration: none; color: black; padding-left: 15px;padding-right: 15px;">Login</a></button>
+                <div class="form-group">
+                    <button type="submit" class="register-now-btn">Register Now</button>
+                  <button type="button" class="login-btn"><a href="1.html" style="text-decoration: none;color: black;">Login Now</a></button>
+                  </div>
             </form>
         </div>
     </div>
