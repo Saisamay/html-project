@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root{
+    --yellow:#24241b;
+    --light-yellow:#e2f324;
+    --black:#8b87b5;
+    --light-color:#141414;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1 rem rgba(0,0,0,.1);
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear ;
+    background: rgba(255,255,255,.8);
+}
+html{
+    font-size: 62;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:7rem ;
+}
+.bike-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 10px;
+    position: relative;
+}
+.bike-container .bike img{
+    height: 400px;
+    width: 750px;
+}
+.bike-details {
+    flex: 1;
+    height: 50px;
+    width:50px
+}
+
+.bike {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background: var(--light-yellow);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--yellow);
+}
+
+.form-details {
+    flex: 1;
+    background: var(--box-shadow);
+    transform: scale(1);
+    padding-left: 150px;
+    padding-top: 20px;
+}
+
+.form-details form {
+    margin-top: 20px;
+    background: var(--box-shadow);
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.bike form p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+.bike .price{
+    font-size: 2.5rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: bolder;
+    text-align: center;
+}
+.bike .price span{
+    font-size: 2.7rem;
+    color: var(--light-yellow);
+    font-weight: normal;
+}
+.bike   p{
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    border-top: var(--border);
+    color: var(--light-color);
+}
+.box {
+    margin: 0.7rem 0;
+    width: 300px;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+.form-details form label {
+    margin-bottom: 10px;
+}
+
+.date-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 5px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.date-inputs input[type="date"]{
+    border: 1px solid; /* Add border around date inputs */
+    border-color:var(--light-color);
+    border-radius: 5px; /* Optional: Add border radius for a rounded look */
+    padding-left: 5px; /* Optional: Add padding to control spacing within the input */
+    width:300px
+}
+.align{
+    display: flex;
+    flex-direction: row;
+}
+.bike-container #close{
+    position: absolute;
+     right: 1rem;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+}
